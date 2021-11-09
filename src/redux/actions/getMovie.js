@@ -8,7 +8,7 @@ export function getMovieSuccess(movie) {
 }
 
 export function getMovie(name,year,type) {
-     
+     const apikey=procee.env.apikey
     return function (dispatch) {
       let url = `http://www.omdbapi.com/?s=${name}&type=${type}&y=${year}&apikey=d03ca61b`;
       return fetch(url)
